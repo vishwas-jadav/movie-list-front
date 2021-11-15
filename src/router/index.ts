@@ -12,7 +12,7 @@ const routes: Array<RouteRecordRaw> = [
     path: '/movies/:id',
     name: 'MovieDetails',
     component: MovieDetails,
-    props: (route) => ({ id: route.params.id }),
+    props: (route) => ({ id: parseInt(route.params.id as string) }),
   },
 ];
 

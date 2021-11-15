@@ -80,7 +80,7 @@ export default defineComponent({
     provide(DefaultApolloClient, apolloClient);
     const router = useRouter();
     const { result, loading, error } = useQuery(movieDetails, {
-      movieId: parseInt(`${props.id}`),
+      movieId: props.id,
     });
 
     if (error) {
@@ -95,6 +95,7 @@ export default defineComponent({
       movie,
       loading,
       router,
+      error,
     };
   },
 });

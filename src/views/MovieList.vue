@@ -9,7 +9,7 @@
       :class="[index % 2 == 0 ? 'float-left' : 'float-right']"
       :key="movie.id"
     >
-      <router-link :to="`/movies/${movie.id}`">
+      <router-link :to="{ name: 'MovieDetails', params: { id: movie.id } }">
         <img :src="movie.poster" alt="poster" />
       </router-link>
     </div>
